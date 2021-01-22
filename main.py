@@ -6,7 +6,7 @@ from pymongo import MongoClient
 def save_file_to_database():
 
     client = MongoClient('localhost', 27017)
-    db = client['crawler-test']
+    db = client['crawler-test-db']
     collection = db['test']
 
     """

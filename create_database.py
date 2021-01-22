@@ -1,4 +1,4 @@
 from pymongo import MongoClient
-client = MongoClient()
-db = client.primer
-collection = db.dataset
+client = MongoClient("mongodb://localhost:27017")
+db = client['crawler-test-db']
+collection = db['test']
