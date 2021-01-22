@@ -37,6 +37,6 @@ def save_file_to_database():
     client.close()
 
 
-save_file_to_database('json_testfile.json')
+save_file_to_database()
 
 
