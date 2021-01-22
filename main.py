@@ -19,20 +19,20 @@ create_json_testfile()
 
 
 def save_file_to_database(file: str):
+    '''
     client = MongoClient('localhost', 27017)
     db = client['crawler-test']
-    collection_name = db['test']
-
+    collection = db['test']
     '''
-    conn = pymongo.MongoClient('mongodb://root:pass@localhost:27017/')
-    db = conn['database']
-    coll = db['test-file-import']
-'''
+
+    client = MongoClient('mongodb://crawler:pwp21@127.0.0.1:27017/')
+    db = client['crawler-pwp21']
+    collection = db['test-file-import']
 
     with open(f'{file}') as file:
         file_data = json.load(file)
 
-    collection_name.insert_many(file_data)
+    collection.insert_many(file_data)
 
     client.close()
 
