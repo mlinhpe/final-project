@@ -19,11 +19,11 @@ create_json_testfile()
 
 
 def save_file_to_database(filename: str):
-    '''
+    """
     client = MongoClient('localhost', 27017)
     db = client['crawler-test']
     collection = db['test']
-    '''
+    """
 
     client = MongoClient('mongodb://crawler:pwp21@127.0.0.1:27017/')
     db = client['crawler-pwp21']
