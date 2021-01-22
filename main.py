@@ -18,7 +18,7 @@ def create_json_testfile():
 create_json_testfile()
 
 
-def save_file_to_database(file: str):
+def save_file_to_database(filename: str):
     '''
     client = MongoClient('localhost', 27017)
     db = client['crawler-test']
@@ -29,7 +29,7 @@ def save_file_to_database(file: str):
     db = client['crawler-pwp21']
     collection = db['test-file-import']
 
-    with open(f'{file}') as file:
+    with open(f'{filename}') as file:
         file_data = json.load(file)
 
     collection.insert_many(file_data)
