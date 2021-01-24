@@ -1,6 +1,6 @@
 var MongoClient = require('mongodb').MongoClient
 var fs = require('fs')
-var url = "mongodb://crawler:pwp21’@localhost:27017/crawler-pwp21"
+var url = "mongodb://crawler:pwp21@localhost:27017/crawler-pwp21"
 
 var testdata = JSON.parse(fs.readFileSync("json_testfile.json",  {encoding: "utf8"}))
 console.log(testdata)
